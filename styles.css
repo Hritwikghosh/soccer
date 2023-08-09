@@ -1,0 +1,284 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+}
+
+.navigation li {
+  margin-right: 10px;
+}
+
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section */
+#hero {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url("images/sf.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65100;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.league-cards,
+.team-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.league-card,
+.team-card {
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.league-card h3,
+.team-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.league-card p,
+.team-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.league-button,
+.team-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff6f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.league-button:hover,
+.team-button:hover {
+  background-color: #e65100;
+}
+
+/* Contact section */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 12px 24px;
+  background-color: #ff6f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form button:hover {
+  background-color: #e65100;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Adjust the layout for tablets and smaller screens */
+  .container {
+    padding: 10px;
+  }
+
+  /* Center align logo and navigation */
+  .logo {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
+  .navigation li {
+    margin-right: 8px;
+  }
+
+  /* Adjust hero section padding */
+  #hero {
+    padding: 80px 0;
+  }
+
+  #hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  #hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  /* Adjust league and team cards width */
+  .league-card,
+  .team-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust the layout for smartphones */
+  .container {
+    padding: 5px;
+  }
+
+  /* Adjust hero section padding */
+  #hero {
+    padding: 60px 0;
+  }
+
+  #hero h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust league and team cards width */
+  .league-card,
+  .team-card {
+    width: 100%;
+  }
+
+  /* Adjust font size for sections */
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  section p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  /* Adjust contact form input and button size */
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Adjust footer font size */
+  footer p {
+    font-size: 12px;
+  }
+}
